@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avinash | Developer Portfolio</title>
+  <link rel="stylesheet" href="avi.css">
+  <script defer src="avi.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">Avinash</div>
+     <div class="mobile-menu-toggle" onclick="toggleMenu()">
+  ☰
+</div>
+<ul class="nav-links mobile-hidden" id="navLinks">
+  <li><a href="#hero">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hello I’m</h2>
+      <h1>Avinash chowdary</h1>
+      <p>Web Developer from India</p>
+      <div class="buttons">
+        <a href="#" class="btn">Get a Quote</a>
+        <a href="#about" class="btn secondary">About Me</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="floting.jpg" alt="Avinash">
+      <div class="floating-box">1 Years of Success</div>
+      <div class="floating-box">10+ Projects Completed</div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <div class="images">
+        <img src="ima17.jpg" class="main-img">
+        <img src="ima16.jpg" class="floating-img">
+        <img src="ima13.jpg" class="tech-icon">
+        <img src="ima15.jpg" class="tech-icon">
+        <img src="ima14.jpg" class="tech-icon">
+      </div>
+      <div class="text">
+        <span class="tag"><strong>I'm a Developer</strong></span>
+        <h2>I Develop Application that Help People</h2>
+        <p>i am from vinukonda.i am studying in mvr college,btech 3rd year.</p>
+        <a href="#projects" class="btn">View projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- projects Section -->
+  <section class="projects" id="projects">
+    <h3 class="section-title">My Amazing Works</h3>
+    <div class="projects">
+      <div class="project-card">
+        <img src="ima13.jpg" alt="Project 1">
+        <h3>Web Application for Desiverse</h3>
+        <a href="#" class="view-btn">View Project →</a>
+      </div>
+      <div class="project-card">
+        <img src="ima12.jpg" alt="Project 2">
+        <h3>Web Application for Gamers</h3>
+        <a href="#" class="view-btn">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h3 class="section-title">I Develop Skills Regularly</h3>
+    <div class="skill-bars">
+      <div class="skill"><label>CSS</label><div class="bar"><div class="fill" style="width: 50%;">50%</div></div></div>
+      <div class="skill"><label>React</label><div class="bar"><div class="fill" style="width: 25%;">25%</div></div></div>
+      <div class="skill"><label>MongoDB</label><div class="bar"><div class="fill" style="width: 10%;">10%</div></div></div>
+      <div class="skill"><label>Python</label><div class="bar"><div class="fill" style="width: 10%;">10%</div></div></div>
+      <div class="skill"><label>PHP</label><div class="bar"><div class="fill" style="width: 50%;">50%</div></div></div>
+      <div class="skill"><label>JavaScript</label><div class="bar"><div class="fill" style="width: 30%;">30%</div></div></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h3 class="section-title">Drop Me a Line</h3>
+    <div class="contact-form">
+      <form action="https://formsubmit.co/avin8138@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="4" placeholder="Message" required></textarea>
+        <button type="submit" class="btn submit-btn">Submit Message</button>
+      </form>
+      <div class="contact-info">
+        <p><strong>Address:</strong> VINUKONDA.</p>
+        <p><strong>Email:</strong> avin8138@gmail.com</p>
+        <p><strong>Phone:</strong> +917416583646</p>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="social-links">
+    <a href="https://wa.me/7416583646" target="_blank" aria-label="WhatsApp">
+      <img src="whatsapp.jpg" alt="WhatsApp" />
+    </a>
+    <a href="https://instagram.com/k__avinash_chowdary___" target="_blank" aria-label="Instagram">
+      <img src="instagram.jpg" alt="Instagram" />
+    </a>
+  </div>
+  <p>© 2025 AVINASH. All rights reserved.</p>
+</footer>
+ <button class="topButton" aria-label="Scroll to Top">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M18 15L12 9L6 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  </button>
+
+
+</body>
+</html>
