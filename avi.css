@@ -48,20 +48,40 @@ nav .logo {
   font-weight: bold;
   color: blue;
 }
-nav ul {
+.nav-links {
   display: flex;
-  list-style: none;
   gap: 20px;
+  list-style: none;
+  margin-right: -140px;
 }
-nav ul a {
-  padding: 8px 12px;
-  transition: color 0.3s;
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
 }
-nav ul a:hover {
+
+.nav-links a:hover {
   color: blue;
 }
 
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: blue;
+  transition: width 0.4s ease;
+}
 
+.nav-links a:hover::after {
+  width: 100%;
+}
+  
 /* Hero Section */
 .hero {
   display: flex;
@@ -87,8 +107,7 @@ nav ul a:hover {
 .buttons .secondary {
   margin-right: 15px;
 }
-.btn,
-.secondary {
+.btn,.secondary {
   display: inline-block;
   padding: 12px 25px;
   border-radius: 50px;
@@ -97,37 +116,39 @@ nav ul a:hover {
   transition: background 0.3s;
 }
 .btn {
-  background: #007bff;
+  background: black;
   color: #fff;
+  box-shadow: 0px 2px 10px;
 }
 .btn:hover {
-  background: black;
+  background: rgb(217, 171, 85);
 }
 .secondary {
-  background: #0475d8;
+  background: black;
   color: #fff;
 }
 .secondary:hover {
-  background: black;
+  background:rgb(199, 152, 65);
 }
 
 .hero-img {
   position: relative;
   width: 280px;
-  margin-top: 20px;
+  margin-top: 10px;
+  
 }
 .hero-img img {
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+  box-shadow: 0 4px 15px ;
 }
 .hero-img .floating-box {
   position: absolute;
   background: #fff;
   color: #333;
-  padding: 12px 18px;
+  padding: 10px 30px;
   border-radius: 8px;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px ;
   animation: float 6s ease-in-out infinite;
 }
 .hero-img .floating-box:nth-child(2) {
@@ -140,7 +161,30 @@ nav ul a:hover {
 }
 @keyframes float {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-20px); }
+}
+.typewriter-container {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  width:fit-content;
+  margin-bottom:auto;
+  text-align: center;
+  margin-bottom:auto;
+  margin-left:-20px ;
+  animation: blink 0.7s infinite;
+}
+#typewriter-text::after{
+  content: |;
+  animation:blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
 }
 
 /* About Section */
@@ -162,20 +206,27 @@ nav ul a:hover {
 .main-img {
   width: 100%;
   border-radius: 10px;
+  box-shadow: 0 4px 15px;
 }
 .floating-img {
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: -105px;
+  left: -20px;
   width: 230px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0px 4px 15px;
+}
+.tech-icon1{
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px;
 }
 .tech-icon {
-  width: 175px;
+  width: 200px;
   position: absolute;
-  bottom: -20px;
+  bottom: -60px;
   right: -20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px;
 }
 .about-content .text {
   flex: 1;
@@ -217,10 +268,11 @@ nav ul a:hover {
   max-width: 350px;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.4s;
+  box-shadow: 0px 8px 15px;
 }
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
 }
 .project-card img {
   width: 100%;
@@ -236,25 +288,29 @@ nav ul a:hover {
   text-align: center;
   margin: 0 15px 15px;
   border-radius: 5px;
+  box-shadow: 0px 2px 10px;
+}
+.view-btn:hover{
+  background-color: rgb(205, 155, 63);
 }
 
 /* Skills Section */
 .skills {
-  padding: 80px 20px;
+  padding: 80px 10px;
   background: #1a1b29;
 }
 .skills .section-title {
-  font-size: 32px;
+  font-size: 20px;
   text-align: center;
-  color: blue;
-  margin-bottom: 40px;
+  color: rgb(10, 10, 222);
+  margin-bottom: 20px;
 }
 .skill-bars {
-  max-width: 800px;
-  margin: auto;
+  max-width:500px;
+  margin:auto;
 }
 .skill {
-  margin-bottom: 20px;
+  margin-bottom:10px;
 }
 .skill label {
   display: block;
@@ -262,14 +318,15 @@ nav ul a:hover {
   font-weight: bold;
 }
 .bar {
-  background: #333;
+  background:beige;
   border-radius: 5px;
   overflow: hidden;
+  border-radius: 40px;
 }
 .fill {
-  background: blue;
+  background:green;
   padding:0px;
-  color: #fff;
+  color:black;
   width: 0;
   animation: loadBar 4s forwards;
   width:var(--fill-width) ;
@@ -309,11 +366,15 @@ nav ul a:hover {
   margin-bottom: 15px;
 }
 .submit-btn {
-  background: green;
+  background:black;
   color: #fff;
   width: 100%;
   padding: 10px;
   font-size: 18px;
+  box-shadow: 0px 5px 10px;
+}
+.submit-btn:hover{
+  background-color: green;
 }
 .contact-info {
   flex: 1;
@@ -342,6 +403,7 @@ nav ul a:hover {
 
 .footer .social-links a:hover {
   transform: scale(1.2);
+  box-shadow: 0px 2px 10px;
 }
 
 .footer .social-links img {
@@ -354,7 +416,7 @@ nav ul a:hover {
   right: 30px;
   width: 48px;
   height: 48px;
-  background-color: #0077ff;
+  background-color: black;
   border: none;
   border-radius: 50%;
   display: none;
@@ -362,17 +424,17 @@ nav ul a:hover {
   justify-content: center;
   z-index: 999;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 15px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .topButton svg {
-  stroke: white;
+  stroke:black;
 }
 
 .topButton:hover {
-  background-color: #005ad1;
-  transform: translateY(-3px);
+  background-color:white;
+  transform: translateY(-4px);
 }
  
 
@@ -395,40 +457,5 @@ nav ul a:hover {
 
   .hero-text h2 {
     font-size: 20px;
-  }
-}
-.mobile-menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  margin-right: 15px;
-}
-
-.mobile-hidden {
-  display: flex;
-}
-
-@media(max-width: 768px) {
-  .mobile-menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    display: none;
-    background-color: #222;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-  }
-
-  .nav-links.mobile-hidden {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
   }
 }

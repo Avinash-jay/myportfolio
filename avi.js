@@ -32,7 +32,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-function toggleMenu() {
-  const menu = document.getElementById("navLinks");
-  menu.classList.toggle("mobile-hidden");
+const words = ["I am Avinashh", "I am a Full Stack Developerr", "I am a Web Developerr"];
+let i = 0;
+let j = 0;
+let isDeleting = false;
+let currentWord = '';
+let typingSpeed = 120; // typing speed
+
+const target = document.getElementById("typewriter-text");
+
+function typeEffect() {
+  currentWord = words[i];
+
+  if (!isDeleting) {
+    target.textContent = currentWord.substring(0, j++);
+  } else {
+    target.textContent = currentWord.substring(0, j--);
+  }
+
+  if (!isDeleting && j === currentWord.length) {
+    isDeleting = true;
+    typingSpeed = 1000; // wait before deleting
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % words.length;
+    typingSpeed = 200; // wait before typing next
+  } else {
+    typingSpeed = isDeleting ? 60 : 120;
+  }
+
+  setTimeout(typeEffect, typingSpeed);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+});
